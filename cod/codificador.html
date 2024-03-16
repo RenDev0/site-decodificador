@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="icon" type="image/x-icon" href="assets/site icon.svg ">
+    <link rel="stylesheet" href="styleCodificador.css">
+</head>
+<body>
+    <!-- se (eventualmente) ficar tudo muito loko e torto, tem um botão escondido na parte inferior direita :p (F pra quem ta no mobile)-->
+    <!-- primeira página da minha vida, dá um desconto ae :( -->
+    <main class="principal">
+        <div class="vidroBlur">
+            <div class="principal__botoes">
+                <a id="cripto" class="principal__botaoCripto" onclick="getFromUser(), criptografar(), resultadoCripto()">criptografar</a> 
+                <a id="descripto" class="principal__botaoDescripto" onclick="getFromUser(), descriptografar(), resultadoDescripto()">descriptografar</a> 
+            </div>
+            <div class="areaInput">
+                <textarea id="Input" class="areaInput__text" spellcheck="false" placeholder="Digite..." ></textarea>
+                <a class="areaInput__x" onclick="apagar()">
+                    <img class="areaInput__x__icon" src="assets/x.svg">
+                </a>
+                <img class="icone__seta" src="./assets/seta icon.svg" draggable="false">
+                <textarea readonly id="Input2" class="areaInput__text"></textarea>
+                <div class="botao__copiar">
+                    <a id="copiar" class="botao__copiarOr" onclick="copyTo()" title="Copiar para área de transferência"><img src="./assets/copy clipboard icon.svg" alt="" class="icone__copy"></a>
+                </div>
+            </div>
+        </div>
+        <div class="infos">
+            <img src="assets/info icon.svg" alt="" class="infoicon">
+            <p class="info">Apenas letras minúsculas. Não deve conter letras maiúsculas e caracteres especiais.</p>
+        </div>
+        <section class="CirculosFilled">
+            <div class="Circulo"></div>
+            <div class="Circulo1"></div>
+            <div class="Circulo2"></div>
+            <div class="Circulo3"></div>
+            <div class="Circulo4"></div>
+            <div class="Circulo5"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <a href="../index.html" class="debugOnly" title="**debug-back"></a>
+        <div class="links">
+            <a class="alura" href="https://cursos.alura.com.br/user/renlim" target="_blank"><img class="alura__icon" src="assets/alura.svg" alt="alura"></a>
+            <a class="github" href="https://github.com/RenDev0" target="_blank">
+            <img class="github__icon" src="./assets/github.svg" alt="github"></a>
+        </div>
+    </footer>
+    <script src="./scripts/funçãoCodificar.js" defer></script>
+    <script src="./scripts/funçãoCopyToClip.js" defer></script>
+    <script src="./scripts/checkChars.js" defer></script>
+</body>
+</html>

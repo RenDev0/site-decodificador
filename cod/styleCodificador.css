@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+:root {
+    --cor1: #ffffff;
+    --cor2: #9C4EEB;
+    
+    --fonte-principal: 'Baloo 2', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(135deg, #101222 0%, #21163E 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* alinha horizontalmente no centro */
+    align-items: center; /* alinha verticalmente no centro */
+    box-sizing: border-box;
+    color: var(--cor1);
+    overflow: hidden;
+}
+
+.vidroBlur {
+    background: linear-gradient(120deg, rgba(190, 128, 255, .2), rgba(190, 128, 255, 0));
+    padding: 5% 5% 3% 5%;
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    z-index: 3;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1005px;
+}
+
+.principal__botoes {
+    display: flex;
+    align-items: center;
+    gap: 6%;
+    max-width: 420px; /* mudar manulamente, pois sou noob */
+}
+
+.principal__botaoCripto {
+    padding: 2.5%;
+    width: 50%;
+    height: 60px;
+    border-radius: 16px;
+    background-color: #9C4EEB;
+    color: var(--cor1);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--fonte-principal);
+    transition: scale 0.05s ease;
+}
+
+.principal__botaoCripto:hover {
+    cursor: pointer;
+    scale: 105%;
+}
+
+.principal__botaoCripto:active {
+    scale: 102%;
+}
+
+.principal__botaoDescripto {
+    padding: 2.5%;
+    width: 50%;
+    height: 60px;
+    border-radius: 16px;
+    background-color: #D4ADFC;
+    color: var(--cor1);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--fonte-principal);
+    transition: scale 0.05s ease;
+}
+
+.principal__botaoDescripto:hover {
+    cursor: pointer;
+    scale: 105%;
+}
+
+.principal__botaoDescripto:active {
+    scale: 102%;
+}
+
+.areaInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+    padding: 2.5% 0%;
+}
+
+.areaInput__x {
+    position: absolute;
+    z-index: 3;
+    left: 440px;
+    top: 140px;
+}
+
+.areaInput__x__icon {
+    width: 25px;
+}
+
+.areaInput__x__icon:hover {
+    filter: contrast(0) brightness(1);
+    cursor: pointer;
+}
+
+.areaInput:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    -webkit-focus-ring-color: transparent;
+    /* não funciona :D */
+}
+
+.areaInput__text {
+    padding: 6px 10px;
+    background-color: #ede6ff;
+    resize: none;
+    width: 464px;
+    height: 280px;
+    border-radius: 16px;
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+}
+
+.icone__seta {
+    width: 3%;
+}
+
+.infos {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5% 5%;
+}
+
+.infoicon {
+    width: 16px;
+}
+
+.info {
+    font-family: var(--fonte-principal);
+    font-size: .9rem;
+    line-height: 100%;
+}
+
+.botao__copiar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 6.5%;
+    bottom: 14.7%;
+}
+
+.icone__copy {
+    position: relative;
+    width: 60%;
+    right: -24%;
+    bottom: -14%;
+    filter: contrast(0) brightness(2);
+}
+
+.botao__copiarOr {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--cor2);
+    transition: scale .15s ease;
+}
+
+.botao__copiar:hover {
+    scale: 105%;
+    cursor: pointer;
+}
+
+.Circulo {
+    position: absolute;
+    left: 1px;
+    bottom: 0px;
+    z-index: 1;
+    width: 410px;
+    height: 410px;
+    max-width: 100%;
+    transform: rotate(30deg);
+    flex-shrink: 0;
+    border-radius: 400px;
+    background: linear-gradient(180deg, #583BAC 0%, rgba(88, 59, 172, 0.00) 100%);
+}
+
+.Circulo1 {
+    position: absolute;
+    top: -200px;
+    right: 300px;
+    z-index: 1;
+    width: 500px;
+    height: 500px;
+    max-width: 50%;
+    transform: rotate(80deg);
+    flex-shrink: 0;
+    border-radius: 400px;
+    background: linear-gradient(90deg, rgba(212, 173, 252, 1), rgba(156, 78, 235, 0) 100%);
+}
+
+.Circulo2 {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    right: 350px;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    max-width: 50%;
+    transform: rotate(80deg);
+    flex-shrink: 0;
+    border-radius: 400px;
+    background: linear-gradient(60deg, rgba(212, 173, 252, 1), rgba(88, 59, 172, 0.00) 100%);
+}
+
+.Circulo3 {
+    position: absolute;
+    right: 0px;
+    top: 180px;
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    max-width: 50%;
+    transform: rotate(80deg);
+    flex-shrink: 0;
+    border-radius: 400px;
+    background: linear-gradient(180deg, #583BAC 0%, rgba(88, 59, 172, 0.00) 100%);
+}
+
+.Circulo4 {
+    position: absolute;
+    top: 120px;
+    left: 600px;
+    z-index: 1;
+    width: 250px;
+    height: 250px;
+    max-width: 50%;
+    transform: rotate(80deg);
+    flex-shrink: 0;
+    border-radius: 400px;
+    background: linear-gradient(-60deg, rgba(58, 40, 108, 0)0%, rgba(58, 40, 108, 1)100%);
+}
+
+.Circulo5 {
+    position: absolute;
+    bottom: 50px;
+    left: 200px;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    max-width: 50%;
+    transform: rotate(80deg);
+    flex-shrink: 0;
+    border-radius: 400px;
+    background: linear-gradient(60deg, rgba(212, 173, 252, 1), rgba(88, 59, 172, 0.00) 100%);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    height: 8%;
+    width: 100%;
+    background: linear-gradient(120deg, rgba(190, 128, 255, .2), rgba(190, 128, 255, .05));
+    border-radius: 24px 24px 0px 0px;
+    backdrop-filter: blur(20px);
+}
+
+.links {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    width: 4%;
+    min-width: 45px;
+    background: var(--cor2);
+    border-radius: 12px;
+    transition: background 0.6s ease;
+}
+
+.github:hover {
+    background: #be81fc;
+}
+
+.github:active {
+    scale: 95%;
+}
+
+.github__icon {
+    padding: 0.5%;
+    width: 100%;
+}
+
+.alura {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2%;
+    min-width: 45px;
+    background: var(--cor2);
+    border-radius: 12px;
+    transition: background 0.6s ease;
+}
+
+.alura:hover {
+    background: #be81fc;
+}
+
+.alura:active {
+    scale: 95%;
+}
+
+.alura__icon {
+    padding: 0.5%;
+    width: 22px;
+}
+
+.debugOnly {
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #D4ADFC;
+    transition: opacity 0.5s ease;
+}
+
+.debugOnly:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1000px) {
+    body {
+        overflow: auto;
+        background: #101222;
+    }
+
+    .principal {
+        height: 100vh;
+    }
+
+    .vidroASaga {
+        margin: 5% 5% 0%;
+    }
+
+    .areaInput {
+        justify-content: unset;
+        flex-direction: column;
+        padding: 20px 0% 0%;
+    }
+
+    .areaInput__x {
+        display: none;
+    }
+
+    .areaInput__text {
+        max-width: 415px;
+        width: 100%;
+        max-height: 260px;
+    }
+
+    .icone__seta {
+        padding: 20px 0%;
+        min-width: 25px;
+        width: 4%;
+        transform: rotate(90deg);
+    }
+
+    .principal__botoes {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 2.5% 0% 0% 0%;
+    }
+
+    .principal__botaoCripto {
+        padding: 13px 0 0 0;
+        font-size: 1.25rem;
+    }
+
+    .principal__botaoDescripto {
+        padding: 13px 0 0 0;
+        font-size: 1.25rem;
+    }
+
+    .botao__copiar {
+        position: relative;
+        bottom: 45px;
+        left: 177px;
+    }
+
+    .infos {
+        padding: 15px 6% 0%;
+    }
+
+    .info {
+        max-width: 300px;
+    }
+
+    .footer {
+        justify-content: center;
+        max-width: 70%;
+        padding: 0;
+        bottom: -110px;
+    }
+
+    .github {
+        width: 6%;
+    }
+
+    .CirculosFilled {
+        size: 0.9%;
+    }
+
+    .Circulo {
+        bottom: 250px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .Circulo3 {
+        display: none;
+    }
+
+    .Circulo4 {
+        display: none;
+    }
+
+    .Circulo5 {
+        bottom: 150px;
+    }
+}
+
+@media (max-width: 700px) {
+    .botao__copiar {
+        left: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        bottom: -5%;
+    }
+}
